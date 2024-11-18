@@ -1,6 +1,6 @@
 import Liked_Item from '../../models/Liked-Item';
 
-import { LikedItemI } from '../../../types';
+import { LikedItemI } from '../../types';
 
 class LikedItemService {
   async addLikedItem(itemData: LikedItemI, userId: string) {

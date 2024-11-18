@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 import User from '../../models/User';
 
-import { UpdatedUserDataI } from '../../../types';
+import { UpdatedUserDataI } from '../../types';
 
 class UserService {
   async createUser(name: string, lastName: string, email: string, password: string) {

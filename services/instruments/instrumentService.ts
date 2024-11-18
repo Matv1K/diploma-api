@@ -1,6 +1,6 @@
 import Instrument from '../../models/Instrument';
 
-import { ApiError, InstrumentI } from '../../../types';
+import { ApiError, InstrumentI } from '../../types';
 
 interface InstrumentQuery {
   sort?: string;

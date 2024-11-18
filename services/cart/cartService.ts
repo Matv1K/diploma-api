@@ -2,7 +2,7 @@ import Cart_Item from '../../models/Cart-Item';
 
 import getTotalPrice from '../../utils/getTotalPrice';
 
-import { CartItemI } from '../../../types';
+import { CartItemI } from '../../types';
 
 class CartService {
   async addCartItem(data: CartItemI, userId: string) {

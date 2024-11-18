@@ -1,7 +1,7 @@
 import Order from '../../models/Order';
 import CartItem from '../../models/Cart-Item';
 
-import { OrderItemI } from '../../../types';
+import { OrderItemI } from '../../types';
 
 class OrderService {
   async createNewOrder(
