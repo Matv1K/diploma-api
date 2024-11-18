@@ -15,23 +15,13 @@ import commentsRoutes from './routes/comments/commentsRoutes';
 const server = express();
 
 // MIDDLEWARES
-
 server.use(express.json());
 server.use(cors());
 
-// DB CONNECTION
-
-mongoose
-  .connect(`${process.env.MONGO_URI}/${process.env.DB_NAME}`)
-  .then(() => console.log('MongoDB is connected'))
-  .catch(() => console.log('Could not set the connection with MongoDB'));
-
 // ROUTES
-
-
 server.get("/", (req, res) => {
-  res.json("hey")
-})
+  res.json("hey");
+});
 
 server.use('/instruments', instrumentRoutes);
 server.use('/users', userRoutes);
@@ -40,6 +30,11 @@ server.use('/liked', likedRoutes);
 server.use('/orders', ordersRoutes);
 server.use('/comments', commentsRoutes);
 
-const port = process.env.PORT || 5000;
+// DB CONNECTION
+mongoose
+  .connect(`${process.env.MONGO_URI}/${process.env.DB_NAME}`)
+  .then(() => console.log('MongoDB is connected'))
+  .catch(() => console.log('Could not set the connection with MongoDB'));
 
-server.listen(port, () => console.log(`Server is running on port ${port}...`));
+// Export the server for Vercel
+export default server;
