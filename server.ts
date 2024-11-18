@@ -29,7 +29,7 @@ mongoose
 // ROUTES
 
 
-server.get("/bobo", (req, res) => {
+server.get("/", (req, res) => {
   res.json("hey")
 })
 
