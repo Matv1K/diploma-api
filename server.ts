@@ -38,3 +38,6 @@ mongoose
 
 // Export the server for Vercel
 export default server;
+
+
+// server.listen(port, () => console.log(Server is running on port ${port}...));
