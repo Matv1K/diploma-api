@@ -33,6 +33,8 @@ mongoose
 
 // ROUTES
 
+server.use('/', (req, res) => res.json("Hello"))
+
 server.use('/instruments', instrumentRoutes);
 server.use('/users', userRoutes);
 server.use('/cart', cartRoutes);
