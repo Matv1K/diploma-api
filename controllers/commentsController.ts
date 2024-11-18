@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 import CommentService from '../services/comments/commentService';
 
-import { ApiError } from '../../types';
+import { ApiError } from '../types/index'
 
 interface AuthenticatedRequest extends Request {
   payload?: jwt.JwtPayload;

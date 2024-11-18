@@ -5,7 +5,7 @@ import Instrument from '../models/Instrument';
 
 import OrderService from '../services/order/orderService';
 
-import { OrderItemI } from '../../types';
+import { OrderItemI } from '../types/index';
 
 interface AuthenticatedRequest extends Request {
   payload?: { id: string };

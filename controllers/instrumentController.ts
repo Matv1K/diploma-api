@@ -6,7 +6,7 @@ import Instrument from '../models/Instrument';
 import cloudinary from '../services/cloudinary/cloudinaryService';
 import InstrumentService from '../services/instruments/instrumentService';
 
-import { ApiError } from '../../types';
+import { ApiError } from '../types/index';
 
 interface CloudinaryResource {
   secure_url: string;

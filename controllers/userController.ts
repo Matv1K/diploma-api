@@ -8,7 +8,7 @@ import User from '../models/User';
 
 import UserService from '../services/user/userService';
 
-import { ApiError } from '../../types';
+import { ApiError } from '../types/index';
 
 interface AuthenticatedRequest extends Request {
   payload?: { id: string };
