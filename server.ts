@@ -17,11 +17,6 @@ const server = express();
 // MIDDLEWARES
 
 server.use(express.json());
-// server.use(cors({
-//   origin: [''],
-//   methods: ['POST', 'GET', 'DELETE', 'PUT', 'PATCH'],
-//   credentials: true,
-// }));
 server.use(cors());
 
 // DB CONNECTION
@@ -32,8 +27,6 @@ mongoose
   .catch(() => console.log('Could not set the connection with MongoDB'));
 
 // ROUTES
-
-server.use('/', (req, res) => res.json("Hello"))
 
 server.use('/instruments', instrumentRoutes);
 server.use('/users', userRoutes);
