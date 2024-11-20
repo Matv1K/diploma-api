@@ -20,7 +20,7 @@ server.use(cors());
 
 // ROUTES
 server.get("/", (req, res) => {
-  res.json("Hey musify");
+  res.json("Hey musify :)");
 });
 
 server.use('/instruments', instrumentRoutes);
