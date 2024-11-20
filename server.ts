@@ -20,7 +20,7 @@ server.use(cors());
 
 // ROUTES
 server.get("/", (req, res) => {
-  res.json("hey");
+  res.json("Hey musify");
 });
 
 server.use('/instruments', instrumentRoutes);
@@ -37,7 +37,6 @@ mongoose
   .catch(() => console.log('Could not set the connection with MongoDB'));
 
 // Export the server for Vercel
-export default server;
+// export default server;
 
-
-// server.listen(port, () => console.log(Server is running on port ${port}...));
+server.listen(5000, () => console.log(`Server is running on port ${5000}...`));
