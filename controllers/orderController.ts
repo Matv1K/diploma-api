@@ -17,8 +17,7 @@ class OrderController {
   async createOrder(req: AuthenticatedRequest, res: Response) {
     const userId = req.payload?.id || '';
     const { items, totalPrice, address, phoneNumber } = req.body as
-    { items: OrderItemI[],
-      totalPrice: number,
+    { items: OrderItemI[], totalPrice: number,
       address: {country: string, city: string, address: string},
       phoneNumber: string
     };
@@ -35,6 +34,8 @@ class OrderController {
           enabled: true,
         },
       });
+
+      console.log(paymentIntent);
 
       const newOrder = await OrderService.createNewOrder(userId, items, totalPrice, address, phoneNumber);
 

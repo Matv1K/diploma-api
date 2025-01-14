@@ -36,7 +36,4 @@ mongoose
   .then(() => console.log('MongoDB is connected'))
   .catch(() => console.log('Could not set the connection with MongoDB'));
 
-// Export the server for Vercel
-// export default server;
-
 server.listen(5000, () => console.log(`Server is running on port ${5000}...`));
